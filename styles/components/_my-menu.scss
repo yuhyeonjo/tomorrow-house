@@ -1,29 +1,49 @@
 .my-menu {
   position: relative;
 
+  &-button {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border: 3px solid $white;
+    border-radius: 50%;
+    transition: border-color 200ms ease-in-out;
+
+    &:hover {
+      border-color: $blue;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &-content {
     @include pos-center-x;
     border-radius: 4px;
     box-shadow: $dropdown-shadow;
-  }
 
-  &::before,
-  &::after {
-    @include pos-center-x;
-    top: 12px;
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 12px solid $white;
-    border-left: 10px solid transparent;
-    content: '';
-  }
+    &::before,
+    &::after {
+      @include pos-center-x;
+      top: 12px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 12px solid $white;
+      border-left: 10px solid transparent;
+      content: '';
+    }
 
-  &::before {
-    border-bottom-color: $border;
-    top: 10px;
+    &::before {
+      border-bottom-color: $border;
+      top: 10px;
+    }
   }
 
   &-list {
