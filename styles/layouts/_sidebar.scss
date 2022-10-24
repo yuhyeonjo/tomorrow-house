@@ -1,4 +1,6 @@
 .sidebar {
+  $sidebar-width: 240px;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -8,8 +10,14 @@
   overflow-y: auto;
   padding: 32px 20px;
   background-color: $white;
+  transform: translate3d(-#{$sidebar-width}, 0, 0);
+  transition: transform 300ms ease-in-out;
   // 아래로 스크롤해도 뒷 영역이 스크롤되지않음
   overscroll-behavior: contain;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &-header {
     padding: 0 12px;
