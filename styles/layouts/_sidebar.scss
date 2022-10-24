@@ -1,8 +1,7 @@
-body {
-  background-color: black;
-}
-
 .sidebar {
+  position: fixed;
+  top: 0;
+
   width: 240px;
   padding: 32px 20px;
   background-color: $white;
@@ -67,10 +66,10 @@ body {
   &-nav {
     .drawer-menu {
       border-top: 1px solid $border;
-    }
 
-    &.is-expert {
-      border-bottom: 1px solid $border;
+      &.is-expert {
+        border-bottom: 1px solid $border;
+      }
     }
   }
 
