@@ -1295,7 +1295,11 @@ i {
   height: 100vh;
   background-color: #FFF;
   padding: 12px 0;
-  z-index: 30; }
+  z-index: 30;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 300ms ease-in-out; }
+  .search-modal.is-active {
+    transform: translate3d(0, 0, 0); }
   .search-modal-header {
     margin-bottom: 20px; }
   .search-modal-form {

@@ -7,6 +7,13 @@
   background-color: $white;
   padding: 12px 0;
   z-index: $search-modal-level;
+  // search-modal 숨기기(transition을 위해 transform을 사용)
+  transform: translate3d(100%, 0, 0);
+  transition: transform 300ms ease-in-out;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &-header {
     margin-bottom: 20px;
